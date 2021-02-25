@@ -20,4 +20,4 @@
 - OpenCart 3.0.3.x
 
 ## Ссылки
-- [Расширение на форуме](https://forum.opencart.name/resources/)
+- [Расширение на форуме](https://forum.opencart.name/resources/tinymce-community.107/)
