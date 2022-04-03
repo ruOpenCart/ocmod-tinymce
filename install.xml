@@ -2,26 +2,26 @@
 <modification>
   <name>[OCN] TinyMCE</name>
   <code>ocn_tinymce</code>
-  <version>3.0.0.0</version>
+  <version>3.0.3.8.0</version>
   <author>Hkr</author>
   <link>https://forum.opencart.name/resources/tinymce-community.107/</link>
-  <date>25.02.2021</date>
+  <date>03.04.2022</date>
 
   <file path="admin/view/template/catalog/category_form.twig">
     <operation>
-      <search trim="true"><![CDATA[<textarea name="category_description[{{ language.language_id }}][description]" placeholder="{{ entry_description }}" id="input-description{{ language.language_id }}" data-toggle="summernote" data-lang="{{ summernote }}" class="form-control">{{ category_description[language.language_id] ? category_description[language.language_id].description }}</textarea>]]></search>
+      <search trim="true"><![CDATA[<textarea name="category_description[{{ language.language_id }}][description]" placeholder="{{ entry_description }}" id="input-description{{ language.language_id }}" data-toggle="summernote" data-lang="{{ language.locale }}" class="form-control">{{ category_description[language.language_id] ? category_description[language.language_id].description }}</textarea>]]></search>
       <add position="replace" trim="true"><![CDATA[<textarea name="category_description[{{ language.language_id }}][description]" placeholder="{{ entry_description }}" id="input-description{{ language.language_id }}" class="form-control tiny">{{ category_description[language.language_id] ? category_description[language.language_id].description }}</textarea>]]></add>
     </operation>
   </file>
   <file path="admin/view/template/catalog/product_form.twig">
     <operation>
-      <search trim="true"><![CDATA[<textarea name="product_description[{{ language.language_id }}][description]" placeholder="{{ entry_description }}" id="input-description{{ language.language_id }}" data-toggle="summernote" data-lang="{{ summernote }}" class="form-control">{{ product_description[language.language_id] ? product_description[language.language_id].description }}</textarea>]]></search>
+      <search trim="true"><![CDATA[<textarea name="product_description[{{ language.language_id }}][description]" placeholder="{{ entry_description }}" id="input-description{{ language.language_id }}" data-toggle="summernote" data-lang="{{ language.locale }}" class="form-control">{{ product_description[language.language_id] ? product_description[language.language_id].description }}</textarea>]]></search>
       <add position="replace" trim="true"><![CDATA[<textarea name="product_description[{{ language.language_id }}][description]" placeholder="{{ entry_description }}" id="input-description{{ language.language_id }}" class="form-control tiny">{{ product_description[language.language_id] ? product_description[language.language_id].description }}</textarea>]]></add>
     </operation>
   </file>
   <file path="admin/view/template/catalog/information_form.twig">
     <operation>
-      <search trim="true"><![CDATA[<textarea name="information_description[{{ language.language_id }}][description]" placeholder="{{ entry_description }}" id="input-description{{ language.language_id }}" data-toggle="summernote" data-lang="{{ summernote }}" class="form-control">{{ information_description[language.language_id] ? information_description[language.language_id].description }}</textarea>]]></search>
+      <search trim="true"><![CDATA[<textarea name="information_description[{{ language.language_id }}][description]" placeholder="{{ entry_description }}" id="input-description{{ language.language_id }}" data-toggle="summernote" data-lang="{{ language.locale }}" class="form-control">{{ information_description[language.language_id] ? information_description[language.language_id].description }}</textarea>]]></search>
       <add position="replace" trim="true"><![CDATA[<textarea name="information_description[{{ language.language_id }}][description]" placeholder="{{ entry_description }}" id="input-description{{ language.language_id }}" class="form-control tiny">{{ information_description[language.language_id] ? information_description[language.language_id].description }}</textarea>]]></add>
     </operation>
   </file>
@@ -33,14 +33,14 @@
   </file>
   <file path="admin/view/template/extension/module/html.twig">
     <operation>
-      <search trim="true"><![CDATA[<textarea name="module_description[{{ language.language_id }}][description]" placeholder="{{ entry_description }}" id="input-description{{ language.language_id }}" data-toggle="summernote" class="form-control">{{ module_description[language.language_id] ? module_description[language.language_id].description }}</textarea>]]></search>
+      <search trim="true"><![CDATA[<textarea name="module_description[{{ language.language_id }}][description]" placeholder="{{ entry_description }}" id="input-description{{ language.language_id }}" data-toggle="summernote" data-lang="{{ language.locale }}" class="form-control">{{ module_description[language.language_id] ? module_description[language.language_id].description }}</textarea>]]></search>
       <add position="replace" trim="true"><![CDATA[<![CDATA[<textarea name="module_description[{{ language.language_id }}][description]" placeholder="{{ entry_description }}" id="input-description{{ language.language_id }}" class="form-control tiny">{{ module_description[language.language_id] ? module_description[language.language_id].description }}</textarea>]]></add>
     </operation>
   </file>
 
   <file path="admin/view/template/catalog/{category_form,product_form,information_form}.twig|admin/view/template/marketing/contact.twig|admin/view/template/extension/module/html.twig">
     <operation>
-      <search trim="true"><![CDATA[<script type="text/javascript" src="view/javascript/summernote/summernote.js"></script>]]></search>
+      <search trim="true"><![CDATA[<script type="text/javascript" src="view/javascript/summernote/summernote.min.js"></script>]]></search>
       <add position="replace" offset="3" trim="true"><![CDATA[
         <script src="view/javascript/tinymce/tinymce.min.js"></script>
         <script src="view/javascript/tinymce/opencart.js"></script>
